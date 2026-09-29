@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.5.2.0" runtimeid="3.5.20.40" libversion="4.5.0.0" compiler="3.5.20.60" lmm="3.5.20.60" profile="ctrlX PLC 3.6.3+" settings="SupportOPCUA, IncludeExecutables, XmlIncludeComments, XmlIncludeExecutables, LayoutCalculator=CompatibilityClientSideLayoutCalculator" />
+    <ProjectInfo name="Code_Tram_Lap_Rap_Chinh_Form" devicename="ctrlX_CORE" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_DATE_AND_TIME" size="4" swapsize="4" typeclass="DateAndTime" iecname="DATE_AND_TIME" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_STRING_15_" size="16" swapsize="0" typeclass="String" iecname="STRING(15)" />
+    <TypeSimple name="T_STRING_16_" size="17" swapsize="0" typeclass="String" iecname="STRING(16)" />
+    <TypeSimple name="T_STRING_20_" size="21" swapsize="0" typeclass="String" iecname="STRING(20)" />
+    <TypeSimple name="T_STRING_200_" size="201" swapsize="0" typeclass="String" iecname="STRING(200)" />
+    <TypeSimple name="T_STRING_36_" size="37" swapsize="0" typeclass="String" iecname="STRING(36)" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeArray name="T_ARRAY__0__15__OF_BOOL" size="16" nativesize="16" typeclass="Array" iecname="ARRAY [0..15] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="15" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__15__OF_STRING_15_" size="256" nativesize="256" typeclass="Array" iecname="ARRAY [0..15] OF STRING(15)" basetype="T_STRING_15_">
+      <ArrayDim minrange="0" maxrange="15" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__2__OF_STRING_16_" size="34" nativesize="34" typeclass="Array" iecname="ARRAY [1..2] OF STRING(16)" basetype="T_STRING_16_">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeUserDef name="T_E_InputStatus" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="E_InputStatus" basetype="T_INT">
+      <UserDefElement type="T_E_InputStatus" iecname="READY" enumvalue="0">
+        <Comment> khong co cam bien -&gt; san sang </Comment>
+      </UserDefElement>
+      <UserDefElement type="T_E_InputStatus" iecname="BUSY" enumvalue="1">
+        <Comment> co cam bien       -&gt; dang ban </Comment>
+      </UserDefElement>
+    </TypeUserDef>
+    <TypeUserDef name="T_Order_Complete_San_Xuat_1" size="66" nativesize="66" typeclass="Userdef" pouclass="STRUCTURE" iecname="Order_Complete_San_Xuat_1">
+      <UserDefElement iecname="Order_ID" type="T_STRING_36_" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="PlannedQuantity" type="T_INT" byteoffset="38" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProducedQuantity" type="T_INT" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="GoodQuantity" type="T_INT" byteoffset="42" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="NGQuantity" type="T_INT" byteoffset="44" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="BoxId" type="T_STRING_16_" byteoffset="46" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Machine_Output" type="T_INT" byteoffset="64" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Order_item_1" size="164" nativesize="164" typeclass="Userdef" pouclass="STRUCTURE" iecname="Order_item_1">
+      <UserDefElement iecname="Customer_ID" type="T_STRING" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Product_Type" type="T_INT" byteoffset="82" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Serialnumber_1" type="T_STRING_16_" byteoffset="84" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Serialnumber_2" type="T_STRING_16_" byteoffset="101" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Serialnumber_3" type="T_STRING_16_" byteoffset="118" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Position_Product" type="T_INT" byteoffset="136" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="TrayID" type="T_STRING_16_" byteoffset="138" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Start_Time" type="T_DATE_AND_TIME" byteoffset="156" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Finish_Time" type="T_DATE_AND_TIME" byteoffset="160" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Product_List_1" size="86" nativesize="86" typeclass="Userdef" pouclass="STRUCTURE" iecname="Product_List_1">
+      <UserDefElement iecname="Customer_ID" type="T_STRING" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Product_Type" type="T_INT" byteoffset="82" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Quantity" type="T_INT" byteoffset="84" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_CodeResult" size="26" nativesize="26" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_CodeResult">
+      <UserDefElement iecname="sSerial" type="T_STRING_20_" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wStatus" type="T_WORD" byteoffset="22" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="bOK" type="T_BOOL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__12__OF_Order_item_1" size="1968" nativesize="1968" typeclass="Array" iecname="ARRAY [1..12] OF Order_item_1" basetype="T_Order_item_1">
+      <ArrayDim minrange="1" maxrange="12" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__12__OF_Product_List_1" size="1032" nativesize="1032" typeclass="Array" iecname="ARRAY [1..12] OF Product_List_1" basetype="T_Product_List_1">
+      <ArrayDim minrange="1" maxrange="12" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__6__OF_ST_CodeResult" size="156" nativesize="156" typeclass="Array" iecname="ARRAY [1..6] OF ST_CodeResult" basetype="T_ST_CodeResult">
+      <ArrayDim minrange="1" maxrange="6" />
+    </TypeArray>
+    <TypeUserDef name="T_ST_Machine_Input" size="84" nativesize="84" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Machine_Input">
+      <UserDefElement iecname="eStatus" type="T_E_InputStatus" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="sBoxID" type="T_STRING" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xAllowRemove" type="T_BOOL" byteoffset="83" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_Machine_Output" size="84" nativesize="84" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Machine_Output">
+      <UserDefElement iecname="eStatus" type="T_E_InputStatus" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="sBoxID" type="T_STRING" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xAllowRemove" type="T_BOOL" byteoffset="83" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__1__3__OF_ST_Machine_Input" size="252" nativesize="252" typeclass="Array" iecname="ARRAY [1..3] OF ST_Machine_Input" basetype="T_ST_Machine_Input">
+      <ArrayDim minrange="1" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__3__OF_ST_Machine_Output" size="252" nativesize="252" typeclass="Array" iecname="ARRAY [1..3] OF ST_Machine_Output" basetype="T_ST_Machine_Output">
+      <ArrayDim minrange="1" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_Order_San_Xuat_1" size="1114" nativesize="1114" typeclass="Userdef" pouclass="STRUCTURE" iecname="Order_San_Xuat_1">
+      <UserDefElement iecname="Order_ID" type="T_STRING" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Product_List" type="T_ARRAY__1__12__OF_Product_List_1" byteoffset="82" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_Order_item_san_xuat_1" size="2008" nativesize="2008" typeclass="Userdef" pouclass="STRUCTURE" iecname="Order_item_san_xuat_1">
+      <UserDefElement iecname="Order_ID" type="T_STRING_36_" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProductList" type="T_ARRAY__1__12__OF_Order_item_1" byteoffset="40" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_T_Machine_Input" size="252" nativesize="252" typeclass="Array" iecname="T_Machine_Input" aliasedtype="T_ARRAY__1__3__OF_ST_Machine_Input" aliasediecname="ARRAY [1..3] OF ST_Machine_Input" basetype="T_ST_Machine_Input">
+      <ArrayDim minrange="1" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_T_Machine_Output" size="252" nativesize="252" typeclass="Array" iecname="T_Machine_Output" aliasedtype="T_ARRAY__1__3__OF_ST_Machine_Output" aliasediecname="ARRAY [1..3] OF ST_Machine_Output" basetype="T_ST_Machine_Output">
+      <ArrayDim minrange="1" maxrange="3" />
+    </TypeArray>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL_Alarm_1">
+        <Node name="axError" type="T_ARRAY__0__15__OF_BOOL" access="ReadWrite">
+          <Comment> 16 co bao loi  </Comment>
+        </Node>
+        <Node name="diErrorCount" type="T_DINT" access="ReadWrite">
+          <Comment> so luong loi dang active         </Comment>
+        </Node>
+        <Node name="sAlarmList" type="T_STRING_200_" access="ReadWrite">
+          <Comment> ghep tat ca ma loi hoac ''       </Comment>
+        </Node>
+        <Node name="wError" type="T_WORD" access="ReadWrite">
+          <Comment> bitmask 16 loi                   </Comment>
+        </Node>
+        <Node name="xAnyError" type="T_BOOL" access="ReadWrite">
+          <Comment> TRUE khi co bat ky loi nao       </Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_Alarm_2">
+        <Node name="axError" type="T_ARRAY__0__15__OF_BOOL" access="ReadWrite">
+          <Comment> 16 co bao loi (da chot)          </Comment>
+        </Node>
+        <Node name="diErrorCount" type="T_DINT" access="ReadWrite">
+          <Comment> so luong loi dang active         </Comment>
+        </Node>
+        <Node name="sAlarmList" type="T_STRING_200_" access="ReadWrite">
+          <Comment> ghep tat ca ma loi hoac ''       </Comment>
+        </Node>
+        <Node name="wError" type="T_WORD" access="ReadWrite">
+          <Comment> bitmask 16 loi                   </Comment>
+        </Node>
+        <Node name="xAnyError" type="T_BOOL" access="ReadWrite">
+          <Comment> TRUE khi co bat ky loi nao       </Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_Bao_Tri_Tien_Doan">
+        <Node name="bBoost_1" type="T_BOOL" access="ReadWrite">
+          <Comment> Trạm sản xuất</Comment>
+        </Node>
+        <Node name="bBoost_10" type="T_BOOL" access="ReadWrite">
+          <Comment> Trạm bóc tách</Comment>
+        </Node>
+        <Node name="bBoost_11" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_12" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_3" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_4" type="T_BOOL" access="ReadWrite">
+          <Comment> Trạm in </Comment>
+        </Node>
+        <Node name="bBoost_5" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_6" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_7" type="T_BOOL" access="ReadWrite">
+          <Comment> Trạm cấp hương</Comment>
+        </Node>
+        <Node name="bBoost_8" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBoost_9" type="T_BOOL" access="ReadWrite" />
+        <Node name="Cam_bien_1" type="T_BOOL" access="ReadWrite" />
+        <Node name="Cam_bien_2" type="T_BOOL" access="ReadWrite" />
+        <Node name="Cam_bien_3" type="T_BOOL" access="ReadWrite" />
+        <Node name="Cam_bien_4" type="T_BOOL" access="ReadWrite" />
+        <Node name="Time_Bangtai_1" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Bangtai_2" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Bangtai_3" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Bangtai_4" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Robot_1" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Robot_2" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Robot_3" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Robot_4" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Xylanh_1" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Xylanh_2" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Xylanh_3" type="T_TIME" access="ReadWrite" />
+        <Node name="Time_Xylanh_4" type="T_TIME" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_Don_Hang">
+        <Comment> Goi y noi dung GVL_Don_Hang (dung voi FB_Xu_Ly_Don_Hang_V18)</Comment>
+        <Node name="sCurrentOrderID" type="T_STRING_36_" access="ReadWrite">
+          <Comment> Order_ID dang chay (de hien thi)</Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_Don_Hang_Retain">
+        <Node name="Feedback" type="T_Order_item_san_xuat_1" access="ReadWrite" />
+        <Node name="KhayTong1" type="T_ARRAY__1__6__OF_ST_CodeResult" access="ReadWrite">
+          <Comment> Khay 1: USB nap trai (NFC khong dung)</Comment>
+        </Node>
+        <Node name="KhayTong2" type="T_ARRAY__1__6__OF_ST_CodeResult" access="ReadWrite">
+          <Comment> Khay 2: USB mach/de | NFC manh to (BAT BUOC)</Comment>
+        </Node>
+        <Node name="KhayTong3" type="T_ARRAY__1__6__OF_ST_CodeResult" access="ReadWrite">
+          <Comment> Khay 3: USB nap phai | NFC manh nho</Comment>
+        </Node>
+        <Node name="Order" type="T_Order_San_Xuat_1" access="ReadWrite" />
+        <Node name="OrderComplete" type="T_Order_Complete_San_Xuat_1" access="ReadWrite">
+          <Comment> Ban tin hoan thanh don (gui ra)</Comment>
+        </Node>
+        <Node name="TrayID_Ext" type="T_ARRAY__1__2__OF_STRING_16_" access="ReadWrite">
+          <Comment> 2 ma tray / hop</Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_Machine_Input">
+        <Node name="aMachineInput" type="T_T_Machine_Input" access="ReadWrite" />
+      </Node>
+      <Node name="GVL_MachineOutput">
+        <Node name="aMachineOutput" type="T_T_Machine_Output" access="ReadWrite">
+          <Comment> MANG ket qua: [Status, BoxID] x3  </Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_MachineStatus">
+        <Node name="BootCount" type="T_UDINT" access="ReadWrite">
+          <Comment> so lan mo may                        </Comment>
+        </Node>
+        <Node name="CycleCount" type="T_UDINT" access="ReadWrite">
+          <Comment> so chu ky da xong                    </Comment>
+        </Node>
+        <Node name="CycleTimeSeconds" type="T_REAL" access="ReadWrite">
+          <Comment> thoi gian chu ky vua xong (giay)     </Comment>
+        </Node>
+        <Node name="dtStart_Error" type="T_DATE_AND_TIME" access="ReadWrite" />
+        <Node name="dtStart_Maintenance" type="T_DATE_AND_TIME" access="ReadWrite" />
+        <Node name="dtStart_Pending" type="T_DATE_AND_TIME" access="ReadWrite" />
+        <Node name="dtStart_Processing" type="T_DATE_AND_TIME" access="ReadWrite" />
+        <Node name="dtStart_Stop" type="T_DATE_AND_TIME" access="ReadWrite" />
+        <Node name="GoodCount" type="T_UDINT" access="ReadWrite">
+          <Comment> so SP OK                             </Comment>
+        </Node>
+        <Node name="iStatus" type="T_INT" access="ReadWrite">
+          <Comment> trang thai dang so: 1..5             </Comment>
+        </Node>
+        <Node name="ScrapCount" type="T_UDINT" access="ReadWrite">
+          <Comment> so SP NG                             </Comment>
+        </Node>
+        <Node name="sLine_ID_Out" type="T_STRING" access="ReadWrite" />
+        <Node name="sMachine_ID_Out" type="T_STRING" access="ReadWrite">
+          <Comment> xuat lai ma may                      </Comment>
+        </Node>
+      </Node>
+      <Node name="GVL_Product_Error">
+        <Node name="asProductCode_1" type="T_ARRAY__0__15__OF_STRING_15_" access="Read" />
+      </Node>
+      <Node name="GVL_Warning_1">
+        <Node name="axWarning" type="T_ARRAY__0__15__OF_BOOL" access="ReadWrite">
+          <Comment> 16 co canh bao (tu mat)             </Comment>
+        </Node>
+        <Node name="diWarnCount" type="T_DINT" access="ReadWrite">
+          <Comment> so luong canh bao dang active       </Comment>
+        </Node>
+        <Node name="sWarnList" type="T_STRING_200_" access="ReadWrite">
+          <Comment> ghep tat ca ma canh bao hoac ''     </Comment>
+        </Node>
+        <Node name="wWarning" type="T_WORD" access="ReadWrite">
+          <Comment> bitmask 16 canh bao                 </Comment>
+        </Node>
+        <Node name="xAnyWarning" type="T_BOOL" access="ReadWrite">
+          <Comment> TRUE khi co bat ky canh bao nao     </Comment>
+        </Node>
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
