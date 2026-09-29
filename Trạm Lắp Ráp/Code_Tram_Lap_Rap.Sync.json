@@ -1,0 +1,51 @@
+{
+  "IsSynced": true,
+  "SyncMode": 1,
+  "InSyncWithRuntime": true,
+  "ApplicationType": "plc",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "b4a74d6a-8769-4b8f-8a18-4ab4287d5312",
+  "LastChange": 639258381251606433,
+  "MachineName": "DESKTOP-TVCD550",
+  "UserName": "Admin",
+  "ProjectCompleteFilename": "C:\\Users\\Admin\\Desktop\\T252.2601\\Code\\Trạm\\Trạm Lắp Ráp\\Code_Tram_Lap_Rap.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 20,
+    "Revision": 60,
+    "MajorRevision": 0,
+    "MinorRevision": 60
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX PLC 3.6.3",
+  "ProductId": "ctrlx-plc-engineering",
+  "ProductVersion": "3.6.3",
+  "ProductVersionText": "3.6.3",
+  "SyncModeSave": true,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "SyncOnOpen": false,
+  "UserMetaData": {
+    "DESKTOP-TVCD550:Admin": {
+      "MachineName": "DESKTOP-TVCD550",
+      "UserName": "Admin",
+      "ProjectCompleteFilename": "C:\\Users\\Admin\\Desktop\\T252.2601\\Code\\Trạm\\Trạm Lắp Ráp\\Code_Tram_Lap_Rap.project"
+    }
+  },
+  "CompileinfoChecksum": null,
+  "SyncDescription": false,
+  "DeviceId": "1001 0080",
+  "DeviceVersion": "3.6.3.0",
+  "UseIoHierachy": true
+}
